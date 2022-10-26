@@ -20,9 +20,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       <span
         style={{ backgroundcolor: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
@@ -38,7 +37,7 @@ const Navbar = () => {
   } = useStateContext();
 
   useEffect(() => {
-    const handleResize = () => SetScreenSize(window.innerWidth);
+    const handleResize = () => SetScreenSize;
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
